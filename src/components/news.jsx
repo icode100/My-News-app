@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
-// 658bec6e935546aa8493bf001845fc6e
+// 4c42d7ae182448d49916ebb929f3e7e9
 import NewsItem from "./newsItem";
 import Spinner from "./spinner";
 export default class News extends Component {
@@ -29,7 +29,7 @@ export default class News extends Component {
   }
 
   async pageconcat(pa) {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=658bec6e935546aa8493bf001845fc6e&page=${pa}&pagesize=${this.props.pagesize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=4c42d7ae182448d49916ebb929f3e7e9&page=${pa}&pagesize=${this.props.pagesize}`;
     this.state.loading = true;
     let data = await fetch(url); //to make the async function wait till the data is fetched completely
     let parsedata = await data.json();
@@ -43,7 +43,7 @@ export default class News extends Component {
   }
   async pagerender(pa) {
     this.props.setProgress(0);
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=658bec6e935546aa8493bf001845fc6e&page=${pa}&pagesize=${this.props.pagesize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=4c42d7ae182448d49916ebb929f3e7e9&page=${pa}&pagesize=${this.props.pagesize}`;
     this.state.loading = true;
     let data = await fetch(url); //to make the async function wait till the data is fetched completely
     let parsedata = await data.json();
